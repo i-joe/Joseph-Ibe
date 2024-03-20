@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300&family=Inter:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.main-container{
+    width :80%;
+    height: 100vh;
+    margin: 1.3rem auto;
+    background-color: #fff;
+    border: 3px solid #21409A;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 4rem;
+}
+
+.nav-bar-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    /* background-color: aqua; */
+}
+
+
+.left-nav-bar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    /* background-color: aquamarine; */
+
+}
+
+.logo-container{
+    width: fit-content;
+    height: auto;
+    margin-right: 5rem;
+    /* background-color: blue; */
+    padding: 1rem;
+}
+
+.logo-container h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #21409A;
+}
+
+.middle-nav-bar{
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blueviolet; */
+    padding: 1rem; 
+    column-gap: 1rem;
+    margin-right: 5rem;
+}
+
+.nav-button{
+    outline: none;
+    border: none;
+    border: 1.5px solid #21409A;
+    padding: 0.8rem 1rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #21409A;
+    background-color: #fff;
+}
+
+.active-nav-button{
+    outline: none;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #21409A;
+}
+
+.body-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.left-body-container{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    align-content: start;
+}
+
+
+.about-container{
+    width: 80%;
+    height: auto;
+}
+.about-container h2{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1D1B1B;
+    margin-bottom: 0.4rem;
+    line-height: 54px;
+    letter-spacing: 0.5px;
+}
+
+.about-container p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #645C5D;
+    margin-bottom: 2rem;
+}
+
+.cta{
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #21409A;
+    cursor: pointer;
+}
+
+.image-container{
+    width: 50%;
+    height: auto;
+}
+
+.image-container img{
+    width: fit-content;
+    height: auto;
+}
+
+.modal-container{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+.modal-container-visible{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: visible;
+}
+
+.modal-container-visible h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #22262e;
+    line-height: 54px;
+    letter-spacing: 0.5px;
+}
+
+.modal-body{
+    width: 50%;
+    height: auto;
+    background-color: #FAF9F9;
+    padding: 1.5rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 2rem;
+    row-gap: 0.5rem;
+}
+
+.modal-body .cancel{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: start;
+}
+
+.cancel img{
+    width: 1.2rem;
+    cursor: pointer;
+}
+
+.top-modal-body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    /* column-gap: 0.5rem; */
+    margin-bottom: 1rem;
+}
+
+.top-left .top-middle .top-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+label{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #1D1B1B;
+}
+
+/* .currency-symbol{
+    position: absolute;
+    right: 35rem;
+    top: 16.05rem;
+} */
+
+.icon-button{
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #4285F4;
+}
+
+.icon-button i{
+    margin-left: 1rem;
+}
+
+input{
+    width: fit-content;
+    height: auto;
+    outline: none;
+    border: 1px solid #d7d7d7;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;  
+}
+
+input:focus{
+    border: 1px solid #21409A;
+}
+
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.convert-button-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+}
+
+.convert-button{
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #21409A;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.convert-button i{
+    margin-left: 1rem;
+    color: #fff;   
+}
+
+.converted-amount-container{
+    width: fit-content;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #21409A;
+    padding: 2rem 4rem;
+    border-radius: 0.6rem;
+}
+
+.converted-amount-container p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #b4b3b3;
+}

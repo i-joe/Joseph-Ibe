@@ -3,7 +3,7 @@ let convertNow = document.getElementById("convertNow")
 let modal = document.getElementById("modal")
 let cancelIcon = document.getElementById("cancel")
 let input = document.getElementById("input")
-let convertButton = document.getElementById("convert-button")
+let convertButtonContainer = document.getElementById("convert-button-container")
 let fromCurrency = document.getElementById("drop-down")
 let toCurrency = document.getElementById("drop-down-2")
 let displayRateContainer = document.getElementById("converted-amount-container")
@@ -29,7 +29,7 @@ cancelIcon.addEventListener("click", function(){
 // fromCurrency.addEventListener("change", calculate)
 // toCurrency.addEventListener("change", calculate)
 // input.addEventListener("input", calculate)
-convertButton.addEventListener("click", calculate)
+convertButtonContainer.addEventListener("click", calculate)
 
 function calculate(){
     let currency1 = fromCurrency.value
@@ -42,16 +42,16 @@ function calculate(){
     fetch(url).then(function(response){
         return response.json()
     }).then(function(data){
-        // console.log(data);
+        console.log(data);
        let rate = data.conversion_rates[currency2]
 
         if(amount.length == 0){
             displayRateContainer.innerHTML = " "
         }else{
             // currencySymbol.textContent = currency1
-            displayRateContainer.innerText = `${currency2} ${rate}`
+            let calculatedRate = (amount * rate).toFixed(2)
+            displayRateContainer.innerText = `${currency2} ${calculatedRate}`
         }
-       input.reset()
     })
 }
 calculate()
